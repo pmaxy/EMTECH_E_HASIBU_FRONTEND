@@ -1,14 +1,22 @@
 <template>
-  <h1 class="bg-gray-500">
-    dfdffgdvfg
-  </h1>
+ 
+
+ <Dashboard />
   
 </template>
 
 <script>
+import Dashboard from './components/User/Dashboard/Dashboard.vue'
+
+
 export default {
-     name:'App'
-}
+
+     name:'App',
+     components:{
+      Dashboard,
+     }
+      
+}    
 </script>
 
 <style>
