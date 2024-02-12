@@ -1,5 +1,10 @@
 <template>
-    <h1>PURCHASES</h1>
+    <h1 class="text-red-500">PURCHASES fgdghm  ghfhm</h1>
+    <ul>
+        <li>gdbfg</li>
+        <li>gdbfg</li>
+        <li>gdbfg</li>
+    </ul>
   
 </template>
 
