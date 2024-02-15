@@ -21,7 +21,6 @@
 
 <script>
 import Footer from './footer/Footer.vue'
-import Dashboard_home from './Main/Dashboard_home.vue'
 import Feedback from './Main/Feedback.vue'
 import Navbar from './Navbar/Navbar.vue'
 import Sidebar from './sidebar/Sidebar.vue'
@@ -31,7 +30,6 @@ export default {
     name:"Dashboard",
     components:{
         Navbar,
-        Dashboard_home,
         Sidebar,
         Footer,
         Feedback,

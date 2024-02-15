@@ -1,5 +1,6 @@
 <template>
-    <h1>Dashboard_home</h1>
+    
+
   
 </template>
 
