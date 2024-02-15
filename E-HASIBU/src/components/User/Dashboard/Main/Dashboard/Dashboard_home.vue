@@ -36,7 +36,7 @@
 
       <li class="list_Button flex md:col-start-3 md:col-end-4">
         <router-link
-          :to="{ name: 'Purchases' }"
+          :to="{ name: 'Purchase_Bill' }"
           class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05]"
         >
           <span
@@ -87,7 +87,7 @@
         class="list_Button flex lg:col-start-6 lg:col-end-7 md:col-start-3 md:col-end-4"
       >
         <router-link
-          :to="{ name: 'Purchases' }"
+          :to="{ name: 'Purchase_Bill' }"
           class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05]"
         >
           <span
