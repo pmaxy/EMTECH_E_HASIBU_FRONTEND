@@ -1,9 +1,9 @@
 <template>
-  <div class="container_main position-relative grid grid-col-1 grid-row-12 h-screen w-screen">
-    <nav class="navbar fixed top-0 left-0 right-0  h-14 bg-red-500  lg:row-start-1 lg:row-end-2">
+  <div class="container_main position-relative grid grid-col-1 grid-row-12 h-screen w-screen shadow-lg">
+    <nav class="navbar fixed top-0 left-0 right-0  h-12 bg-white   lg:row-start-1 lg:row-end-2 flex items-center w-full ">
         <Navbar />
     </nav>
-    <section class="fixed flex w-screen justify-evenly top-14 bottom-0 left-0 right-0  sec1 lg:row-start-2 lg:row-end-12">
+    <section class="fixed flex w-screen justify-evenly top-12 bottom-0 left-0 right-0  sec1 lg:row-start-2 lg:row-end-12">
         <div class=" bg-gray-200 ">
             <Sidebar/>
         </div>
