@@ -4,7 +4,7 @@
         <Navbar />
     </nav>
     <section class="fixed flex w-screen justify-evenly top-14 bottom-0 left-0 right-0  sec1 lg:row-start-2 lg:row-end-12">
-        <div class=" bg-gray-200 ">
+        <div class=" bg-gray-200 hidden lg:flex">
             <Sidebar/>
         </div>
         <div class="main  w-full flex flex-col h-screen overflow-auto">
