@@ -66,14 +66,12 @@
     <label for="streetName">Street Name</label>
     <input class="bg-gray-200 ml-3 rounded-lg w-100 outline outline-1 hover:outline-4 outline-gray-600" type="text" id="streetName" v-model="formValues.streetName"/>
   </li>
-
-  
-   <li  class="flex flex-col">
-    <MapComponent/>
-  </li>
   </ul>
-
-  </form>
+  <h2 class="font-bold text-bs">Geolocation</h2>
+ 
+    <MapComponent/>
+   
+   </form>
   </div>
 </template>
 
