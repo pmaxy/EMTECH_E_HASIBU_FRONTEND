@@ -1,5 +1,5 @@
 <template>
-  <div id="map" class="w-50 h-50"></div>
+  <div id="map" class="w-64 h-64"></div>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
     onMounted(() => {
       map.value = L.map('map', {
         zoom: 15,
-        center: [-1.1393906526894229, 36.923879144596775], // Adjust initial center coordinates
+        center: [-1.1393906526894229, 36.923879144596775],
       });
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
