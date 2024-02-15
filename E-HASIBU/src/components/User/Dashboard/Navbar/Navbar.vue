@@ -3,7 +3,7 @@
     <div class="col-start-1 col-end-2 ">
       <ul class="flex justify-between flex-row gap-32 ">
         <li class="flex gap-3">
-          <img src="@/assets/receipt-solid.svg"  class="w-6" alt="">
+          <img src="@/assets/receipt-solid.svg"   class="w-6" alt="">
           <span class="font-bold text-red-800">E-HASIBU</span>
         </li>
         <li class="relative">
