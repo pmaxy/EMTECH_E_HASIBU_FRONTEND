@@ -1,5 +1,5 @@
 <template>
-  <div class="container_main position-relative grid grid-col-1 grid-row-12 h-screen w-screen">
+  <div class="container_main position-relative grid grid-col-1 grid-row-12 h-screen w-screen overflow-auto">
     <nav class="navbar fixed top-0 left-0 right-0  h-14 bg-red-500  lg:row-start-1 lg:row-end-2">
         <Navbar />
     </nav>
