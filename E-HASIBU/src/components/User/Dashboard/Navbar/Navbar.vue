@@ -1,7 +1,7 @@
 <template>
   <div class="nav grid grid-col-3 pl-3 pr-3 justify-between w-full ">
     <div class="col-start-1 col-end-2 ">
-      <ul class="flex justify-between flex-row gap-32 ">
+      <ul class="flex justify-between flex-row gap-5 lg:gap-32 ">
         <li class="flex gap-3">
           <img src="@/assets/receipt-solid.svg"   class="w-6" alt="">
           <span class="font-bold text-red-800">E-HASIBU</span>
