@@ -9,6 +9,12 @@ const router = createRouter({
       component: () => import('../components/User/Dashboard/Dashboard.vue')
     },
     {
+      path: '/Login',
+      name: 'Login',
+      component: () => import('../components/User/Authentication/Verification.vue')
+    },
+
+    {
       path: '/Feedback',
       name: 'Feedback',
       component: () => import('../components/User/Dashboard/Main/Feedback.vue')
