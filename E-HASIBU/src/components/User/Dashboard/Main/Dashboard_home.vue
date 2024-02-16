@@ -183,7 +183,7 @@
     <ul
       class="grid w-auto lg:row-start-3 lg:row-end-4 lg:col-start-1 lg:col-end-3 bg-rose-800"
     >
-      <li>jhjd</li>
+      
     </ul>
     <ul
       class="grid lg:row-start-4 w-auto lg:row-end-5 lg:col-start-1 lg:col-end-3 bg-purple-500"
@@ -191,10 +191,7 @@
       <li>hgjhjd</li>
     </ul>
   </div>
-  <div>
-    
-    <apexchart type="line" :options="chartOptions" :series="series"></apexchart>
-  </div>
+  
 </template>
 
 
