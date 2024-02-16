@@ -109,7 +109,7 @@
       >
         <router-link
           :to="{ name: 'Sales' }"
-          class="py-10 px-20 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05]"
+          class="py-10 px-20  bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05]"
         >
           <span>
             <font-awesome-icon
