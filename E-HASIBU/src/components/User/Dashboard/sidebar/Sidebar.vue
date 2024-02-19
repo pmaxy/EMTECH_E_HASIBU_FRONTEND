@@ -31,7 +31,7 @@
                 <ul v-if="isHidden" class="p-2 flex flex-col gap-1">
                   <li class="bg-white rounded-lg p-2 hover:scale-[1.03] shadow-lg"><router-link :to="{name:'Purchase_Order'}">Purchase order</router-link></li>
                   <li class="bg-white rounded-lg p-2 hover:scale-[1.03] shadow-lg"><router-link :to="{name:'Vendor_Details'}">Vendor Details</router-link></li>
-                  <li class="bg-white rounded-lg p-2 hover:scale-[1.03] shadow-lg"><router-link :to="{name:'Purchase_Bill'}">Purchase Bill </router-link></li>
+                  <li class="bg-white  rounded-lg p-2 hover:scale-[1.03] shadow-lg"><router-link :to="{name:'Purchase_Bill'}">Purchase Bill </router-link></li>
                 </ul>
               </div>
               
