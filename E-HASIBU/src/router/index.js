@@ -47,11 +47,31 @@ const router = createRouter({
     },
 
     {
-      path: '/Expenses',
-      name: 'Expenses',
-      component: () => import('../components/User/Dashboard/Main/Expenses.vue')
+      path: '/General_Expenses',
+      name: 'General_Expenses',
+      component: () => import('../components/User/Dashboard/Main/Expenses/General_Expenses.vue')
     }
     ,
+    {
+      path: '/PayTable',
+      name: 'PayTable',
+      component: () => import('../components/User/Dashboard/Main/Expenses/PayTable.vue')
+    },
+    {
+      path: '/Payroll',
+      name: 'Payroll',
+      component: () => import('../components/User/Dashboard/Main/Expenses/Forms/Payroll.vue')
+    },
+    {
+      path: '/general_expenses',
+      name: 'general_expenses',
+      component: () => import('../components/User/Dashboard/Main/Expenses/Forms/general_expenses.vue')
+    },
+    {
+      path: '/General_Expenses',
+      name: 'General_Expenses',
+      component: () => import('../components/User/Dashboard/Main/Expenses/General_Expenses.vue')
+    },
     {
       path: '/Dashboard_home',
       name: 'Dashboard_home',
