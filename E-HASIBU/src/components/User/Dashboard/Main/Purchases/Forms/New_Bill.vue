@@ -34,8 +34,11 @@
     <label for="dueDate" class="ml-3 mb-2">Due Date: </label>
          <input type="text" id="dueDate" class="bg-gray-200 ml-2 mt-5 mb-3 mr-2 rounded w-50" placeholder="Due Date"  v-model="formvalues.dueDate">
     </div>
+    <div>
+    <label for="file-upload" class="text-white bg-red-800 w-25 rounded ml-4 mr-4 mt-2 mb-2 w-40 box-shadow-50">Upload Invoice: </label>
+    <input type="file" id="file-upload" @change="uploadFile">
+</div>
     <div class="text-center font-bold">
-      <button @click="UploadInvoice" class="text-white bg-red-800 w-25 rounded ml-4 mr-4 mt-2 mb-2 w-40 box-shadow-50">Upload Invoice</button><br>
       <button @click="cance" class="text-white bg-red-800 w-25 rounded ml-4 mr-4 mt-2 mb-2 w-20 box-shadow-50">Cance</button>
       <button @click="submit" class="text-white bg-red-800 w-25 rounded ml-4 mr-4 w-20 box-shadow-50" >Submit</button>
       </div>
@@ -89,7 +92,11 @@ export default {
          },
          submit(){
 
-         }
+         },
+          uploadFile(event) {
+      // Handle file upload logic here
+      console.log("Uploading file:", event.target.files[0]);
+        }   
   },
    computed:{
       amount() {
