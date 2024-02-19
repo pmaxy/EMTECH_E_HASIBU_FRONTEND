@@ -3,13 +3,12 @@
 <!--<StartUpPage />-->
  <!--<SignUp />-->
  <!--<CreatePassword />-->
- <Dashboard />
+ <dashboard />
   
 </template>
 
 <script>
 import Dashboard from './components/User/Dashboard/Dashboard.vue'
-
 
 
 export default {
