@@ -25,7 +25,7 @@
               <div>
                 <div @click="closeNav" class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05]">
               
-                <img src="@\assets\internship-3833168-3185247.png" class="w-10 bg-red-800 rounded-lg p-2" alt="dashboard">
+                <img src="@\assets\internship-3833168-3185247.png"  class="w-10 bg-red-800 rounded-lg p-2" alt="dashboard">
                 <span>Purchases</span>
                 </div>
                 <ul v-if="isHidden" class="p-2 flex flex-col gap-1">
