@@ -1,6 +1,8 @@
 <template>
  
-
+<!--<StartUpPage />-->
+ <!--<SignUp />-->
+ <!--<CreatePassword />-->
  <Dashboard />
   
 </template>
@@ -9,11 +11,13 @@
 import Dashboard from './components/User/Dashboard/Dashboard.vue'
 
 
+
 export default {
 
      name:'App',
      components:{
       Dashboard,
+
      }
       
 }    
