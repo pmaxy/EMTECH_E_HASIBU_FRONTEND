@@ -21,7 +21,7 @@
    </div>
    <div>
       <h2>Billing Information</h2>
-    <p class="bg-white text-red-800 ml-5 mr-10 mt-2 rounded"><label for="billingAddress">Billing Address: </label>
+    <p class="bg-white text-red-800  ml-5 mr-10 mt-2 rounded"><label for="billingAddress">Billing Address: </label>
          <input type="text" id="billingAddress" class="bg-gray-200 ml-2 mt-5 mr-2 rounded w-50" placeholder="Billing Address"  v-model="formvalues.billingAddress"><br>
           <label for="city">City: </label>
          <input type="text" id="city" class="bg-gray-200 ml-2 mt-5 mr-2 rounded w-50" placeholder="City"  v-model="formvalues.city"><br>
