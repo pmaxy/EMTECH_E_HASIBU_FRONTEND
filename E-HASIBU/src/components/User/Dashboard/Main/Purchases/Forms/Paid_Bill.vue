@@ -1,6 +1,6 @@
 
 <template>
-<router-link :to="{name :'Purchase_Bill'}" class=" bg-red-800 text-white ml-5 mr-10 mt-2 rounded pl-4 pd-4">Previous
+<router-link :to="{name :'Purchase_Bill'}"  class=" bg-red-800 text-white ml-5 mr-10 mt-2 rounded pl-4 pd-4">Previous
 </router-link>
 <div class="h-screen overflow-y-scroll">
   <h1 class="bg-white text-red-800 text-center font-bold">PAID BILL</h1>

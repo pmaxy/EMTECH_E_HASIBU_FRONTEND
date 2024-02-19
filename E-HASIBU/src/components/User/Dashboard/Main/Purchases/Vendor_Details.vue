@@ -1,7 +1,7 @@
 <template>
   <div class="text-red-800 ml-5 rounded-lg">
     <h2 class="text-center"><b>VENDOR Details</b></h2>
-    <div class="bg-white ml-2 mr-2 rounded-lg">
+    <div class="bg-white ml-2 mr-2 rounded-lg" >
     <ul>
       <li v-for="(vendor, index) in vendors" :key="index">
         {{ vendor.name }} - Email: {{ vendor.email }} - Phone: {{ vendor.phone }}

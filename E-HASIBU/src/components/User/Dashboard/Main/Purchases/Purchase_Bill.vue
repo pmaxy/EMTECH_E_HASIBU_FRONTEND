@@ -19,7 +19,7 @@
       </select>
     </div> <br>
 
-    <table class="my-table w-full border border-gray-100 table-auto">
+    <table class="my-table w-full  border border-gray-100 table-auto">
       <thead>
         <tr>
           <th class="px-4 py-2 border border-red-800 bg-white">Vendor Name</th>
