@@ -127,7 +127,7 @@
         class="list_Card flex lg:col-start-2 lg:col-end-3 md:col-start-2 md:col-end-3 mt-4 mb-4"
       >
         <router-link
-          :to="{ name: 'Sales' }"
+          :to="{ name: 'Sales'}"
           class="px-20 py-10 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05]"
         >
           <span>
