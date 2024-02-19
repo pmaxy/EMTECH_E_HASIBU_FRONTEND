@@ -1,5 +1,5 @@
 <template>
-  <div id="map" class="w-64 h-64"></div>
+  <div id="map" class="w-1/2 h-72"></div>
 </template>
 
 <script>

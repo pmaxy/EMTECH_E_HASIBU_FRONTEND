@@ -1,6 +1,6 @@
 <template>
   <div class="w-screen h-screen flex items-center justify-center bg-gray-200">
-    <form class="formGroup flex flex-col justify-center gap-4 rounded-lg pt-20 pb-20 pl-10 pr-10 bg-white items-center ring-1 ring-black-100 ring-inset">
+    <form class="formGroup flex flex-col justify-center gap-4 rounded-lg pt-20 pb-20 pl-10 pr-10 bg-white items-center ring-1 ring-black-100 ring-inset" @submit="handleSubmit">
       <h1 class="text-red-800 font-bold">RESET PASSWORD</h1>
         <div>
         <img class="bg-red-800" src="@/assets/user-solid.svg" alt="user">
@@ -30,10 +30,14 @@ data(){
     formValues:{
       newPassword:'',
       confirmNewPassword:''
-    }
+    },
+    methods:{
+      handleSubmit(event) {
+      event.preventDefault();
+       }
   }
 }
-
+}
 }
 </script>
 

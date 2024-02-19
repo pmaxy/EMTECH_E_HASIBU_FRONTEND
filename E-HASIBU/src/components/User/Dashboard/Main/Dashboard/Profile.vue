@@ -1,78 +1,95 @@
 <template>
-<div class="w-screen h-screen flex flex-grow justify-center items-center bg-gray-200 w-full grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-<form class="flex flex-col gap-4 bg-gray-200 pr-4 pl-4 pt-4 pb-4  w-full">
-<ul class=" col-start-1 col-end-3 row-start-1 row-end-2 flex flex-col justify-center items-center w-full bg-red-900">
-  <img class="w-full object-cover md:h-auto md:w-48 md:rounded-none" src="../assets/user.svg" alt="user">
-  <li class="text-white">Welcome, {{firstName}} {{lastName}}</li>
- </ul>
+<div class="justify-start bg-white">
 
-<ul class="flex flex-col gap-4 mb-4 grid-col-3 row-start-2 col-start-1 col-end-3 ">
-  <h2 class="font-bold text-bs">Personal Details</h2>
-  <li  class="flex">
-    <label for="firstName">First Name</label>
-    <input class="bg-gray-200 ml-3 rounded-lg w-100 outline outline-1 hover:outline-4 outline-gray-600 " type="text" id="firstName" v-model="formValues.firstName"/>
-  </li>
-
-   <li  class="flex">
-    <label for="lastName">Last Name</label>
-    <input class="bg-gray-200 ml-3 rounded-lg w-100 outline outline-1 hover:outline-4 outline-gray-600" type="text" id="lastName" v-model="formValues.lastName"/>
-  </li>
-
-   <li  class="flex ">
-    <label for="email">Email</label>
-    <input class="bg-gray-200 ml-3 rounded-lg w-100 outline outline-1 hover:outline-4 outline-gray-600" type="text" id="email" v-model="formValues.email"/>
-  </li>
-
-   <li  class="flex ">
-    <label for="nationalId">National ID</label>
-    <input class="bg-gray-200 ml-3 rounded-lg w-100 outline outline-1 hover:outline-4 outline-gray-600" type="text" id="nationalID" v-model="formValues.nationalID"/>
-  </li>
-
-   <li  class="flex ">
-    <label for="phoneNo">Phone Number</label>
-    <input class="bg-gray-200 ml-3 rounded-lg w-100 outline outline-1 hover:outline-4 outline-gray-600" type="text" id="phoneNo" v-model="formValues.phoneNo"/>
-  </li>
-</ul>
-
-
-<ul class="flex flex-col gap-4 mb-4">
-  <h2 class="font-bold text-bs">Business Information</h2>
-  <li  class="flex">
-    <label for="businessName">Business Name</label>
-    <input class="bg-gray-200 ml-3 rounded-lg w-100 outline outline-1 hover:outline-4 outline-gray-600" type="text" id="businessName" v-model="formValues.businessName"/>
-  </li>
-
-   <li  class="flex">
-    <label for="VATReg">VAT Registration Status</label>
-    <input class="bg-gray-200 ml-3 rounded-lg w-100 outline outline-1 hover:outline-4 outline-gray-600" type="text" id="VATreg" v-model="formValues.VATReg"/>
-  </li>
-
-   <li  class="flex ">
-    <label for="accountNo">Account Number</label>
-    <input class="bg-gray-200 ml-3 rounded-lg w-100 outline outline-1 hover:outline-4 outline-gray-600" type="text" id="accountNo" v-model="formValues.accountNo"/>
-  </li>
-</ul>
-
-
-
-<ul class="flex flex-col gap-4 mb-4">
-  <h2 class="font-bold text-bs">Address</h2>
-  <li  class="flex">
-    <label for="physicalAddress">Physical Address</label>
-    <input class="bg-gray-200 ml-3 rounded-lg w-100 outline outline-1 hover:outline-4 outline-gray-600" type="text" id="physicalAddress" v-model="formValues.physicalAddress"/>
-  </li>
-
-   <li  class="flex ">
-    <label for="streetName">Street Name</label>
-    <input class="bg-gray-200 ml-3 rounded-lg w-100 outline outline-1 hover:outline-4 outline-gray-600" type="text" id="streetName" v-model="formValues.streetName"/>
-  </li>
-  </ul>
-  <h2 class="font-bold text-bs">Geolocation</h2>
- 
-    <MapComponent/>
-   
-   </form>
+<form class="max-w-xxl w-full">
+  <div class=" flex items-center w-full bg-red-900 py-3">
+    <div class="bg-gray-200 rounded-full px-3 py-3 mr-2 ml-2">
+    <font-awesome-icon :icon="['fa', 'user']" size="xl"/>
+    <font-awesome-icon :icon="['fa', 'camera']" size="2xs"/>
   </div>
+  <h2 class="text-white font-semibold">Welcome, {{formValues.firstName}} {{formValues.lastName}}</h2>
+ </div>
+  <h2 class="font-bold text-bs text-red-900">Personal Details</h2>
+
+    <div class="grid md:grid-cols-2 md:gap-6">
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="text" name="floating_first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required v-model="formValues.firstName" />
+        <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
+ 
+   </div>
+   </div>
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required v-model="formValues.lastName"/>
+        <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+    </div>
+   
+
+  <div class="relative z-0 w-full mb-5 group">
+      <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required  v-model="formValues.email"/>
+      <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+  </div>
+ 
+  <div class="relative z-0 w-full mb-5 group">
+      <input type="text" name="national" id="floating_national-ID" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required v-model="formValues.nationalID"/>
+      <label for="floating_repeat_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">National ID</label>
+  </div>
+  <div class="grid md:grid-cols-2 md:gap-6">
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required v-model="formValues.phoneNo"/>
+        <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (123-456-7890)</label>
+    </div>
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="text" name="floating_company" id="floating_company" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required v-model="formValues.Company"/>
+        <label for="floating_company" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Company (Ex. Google)</label>
+    </div>
+  </div>
+
+  
+ <pre></pre>
+   
+    <h2 class="font-bold text-bs text-red-900">Business Information</h2>
+
+    <div class="grid md:grid-cols-2 md:gap-6">
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="text" name="floating_Business_name" id="floating_Business_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required v-model="formValues.businessName"/>
+        <label for="floating_business_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Business Name</label>
+ 
+   </div>
+   </div>
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="text" name="floating_VAT_registration_status" id="floating_VAT_registration" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required v-model="formValues.VATReg" />
+        <label for="floating_VAT_Registration_status" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">VAT Registration Status</label>
+    </div>
+   
+
+  <div class="relative z-0 w-full mb-5 group">
+      <input type="email" name="floating_Account_Number" id="floating_Account_Number" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required v-model="formValues.accountNo"/>
+      <label for="floating_Account_Number" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Account Number</label>
+  </div>
+
+
+ <h2 class="font-bold text-bs text-red-900">Address</h2>
+  <div class="relative z-0 w-full mb-5 group">
+        <input type="text" name="floating_Physsical_Address" id="floating_physical_address" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required v-model="formValues.address"/>
+        <label for="floating_physical-address" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Physical Address</label>
+    </div>
+   
+
+  <div class="relative z-0 w-full mb-5 group">
+      <input type="text" name="floating_Street-Name" id="floating_Street_Name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required v-model="formValues.streetName" />
+      <label for="floating_Street_Name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Street Name</label>
+  </div>
+
+ <pre></pre>
+
+<h2 class="font-bold text-bs text-red-900">Geolocation</h2>
+ <MapComponent/>
+
+<button type="submit" class="text-white bg-red-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+
+</form>
+</div>
+  
 </template>
 
 <script>
@@ -86,12 +103,13 @@ export default {
     return{
 
     formValues:{
-      firstName:'',
-      lastName:'',
+      firstName:'John',
+      lastName:'Doe',
       email:'',
       nationalID:'',
       phoneNo:'',
       businessName:'',
+      company:'',
       VATReg:'',
       accountNo:'',
       address:'',
@@ -99,6 +117,10 @@ export default {
       location:''
       }
     }
+  },
+  methods:{
+     
+
   }
 
 }
