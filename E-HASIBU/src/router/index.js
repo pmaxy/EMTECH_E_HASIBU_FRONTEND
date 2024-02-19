@@ -61,7 +61,7 @@ const router = createRouter({
     {
       path: '/Dashboard_home',
       name: 'Dashboard_home',
-      component: () => import('../components/User/Dashboard/Main/Dashboard_home.vue')
+      component: () => import('../components/User/Dashboard/Main/Dashboard/Dashboard_home.vue')
     },
 
     {

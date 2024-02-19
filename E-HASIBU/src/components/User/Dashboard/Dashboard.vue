@@ -7,10 +7,10 @@
         <div class=" bg-gray-200 ">
             <Sidebar/>
         </div>
-        <main class="main relative w-full flex flex-col overflow-auto">
-             <div class="bg-gray-300  h-full "><router-view></router-view></div>
-             <div class=" bg-yellow-500 fixed w-full bottom-0  ">
-              <Footer />
+        <main class="main relative w-full bg-gray-200 flex flex-col overflow-y-auto overflow-x-hidden justify-between h-full ">
+             <div class=" "><router-view></router-view></div>
+             <div class="  ">
+              <Footer class="bg-rose-800" />
             </div>
         </main>
     </div>
