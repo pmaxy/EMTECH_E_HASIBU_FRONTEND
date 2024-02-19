@@ -8,7 +8,7 @@
       <h2>Client Information </h2>
         <p class="bg-white text-red-800 ml-5 mr-10 mt-2 rounded"> <label for="firstName">First Name: </label>
          <input type="text" id="firstName" class="bg-gray-200 mt-5 ml-2 mr-2 rounded w-50" placeholder="First Name"  v-model="formvalues.firstName">
-         <label for="middleName">Middle Name: </label>
+         <label for="middleName">Middle Name:  </label>
          <input type="text" id="middleName" class="bg-gray-200 ml-2 mt-5 mr-2 rounded w-50" placeholder="Middle Name"  v-model="formvalues.middleName">
          <label for="lastName">Last Name: </label>
          <input type="text" id="lastName" class="bg-gray-200 mt-5 ml-2 mr-2 rounded w-50" placeholder="Last Name"  v-model="formvalues.lastName"><br>
