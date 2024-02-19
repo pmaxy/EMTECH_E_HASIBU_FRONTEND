@@ -16,7 +16,7 @@
       <li class="list_button flex md:col-start-1 md:col-end-2">
         <router-link
           :to="{ name: 'Sales' }"
-          class="p-2 bg-white rounded-lg gap-2 items-center row hover:scale-[1.05] flex bg-gradient-to-br from-white to-red-50"
+          class="p-2 bg-white max-w-lg rounded-lg gap-2 items-center row hover:scale-[1.05] flex bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
 >
@@ -54,7 +54,7 @@
       <li class="list_Button flex md:col-start-3 md:col-end-4">
         <router-link
           :to="{ name: 'Purchases' }"
-          class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
+          class="p-2 bg-white max-w-lg rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
 >
@@ -76,7 +76,7 @@
       >
         <router-link
           :to="{ name: 'Expenses' }"
-          class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
+          class="p-2 bg-white rounded-lg max-w-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
 >
@@ -98,7 +98,7 @@
       >
         <router-link
           :to="{ name: 'Sales' }"
-          class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
+          class="p-2 bg-white max-w-lg rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
 >
@@ -120,7 +120,7 @@
       >
         <router-link
           :to="{ name: 'Purchases' }"
-          class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
+          class="p-2 bg-white rounded-lg  max-w-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
 >
@@ -372,21 +372,21 @@
     <ul
       class="grid lg:row-start-4 lg:col-start-1 gap-1 lg:col-end-2 gap-6 w-full  grid-col-4 items-center justify-around pb-2"
     >
-      <li class="lg:col-start-1 lg:col-end-3">
+      <li class="lg:col-start-1 lg:col-end-3 max-w-lg ">
         <performanceChart />
       </li>
-      <li class="lg:col-start-3 lg:col-end-4">
+      <li class="lg:col-start-3 lg:col-end-4 max-w-lg">
         <salesChart />
       </li>
     </ul>
     <ul
       class="grid lg:row-start-5  lg:row-end-6 gap-6  lg:col-start-1 gap-1 lg:col-end-2 grid-col-4 items-center justify-around"
     >
-      <li class="lg:col-start-1 xl:col-end-2">
+      <li class="lg:col-start-1 xl:col-end-2 max-w-lg">
         <DailySalesByItem />
       </li>
 
-      <li class="lg:col-start-2 lg:col-end-4">
+      <li class="lg:col-start-2 lg:col-end-4 max-w-lg">
         <ExpensesLineChart />
       </li>
     </ul>

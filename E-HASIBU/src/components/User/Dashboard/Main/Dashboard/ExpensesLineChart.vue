@@ -102,7 +102,7 @@
         </div>
       </div>
     </div>
-    <div id="line2-chart" class="h-60"></div>
+    <div id="line2-chart" class="h-70"></div>
     <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between mt-2.5">
       <div class="pt-5">
         <a
