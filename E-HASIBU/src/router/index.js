@@ -94,7 +94,20 @@ const router = createRouter({
       path: '/Paid_Bill' ,
       name: 'Paid_Bill',
       component: () => import('../components/User/Dashboard/Main/Purchases/Forms/Paid_Bill.vue')
-    }
+    },
+    {
+      path: '/Profile',
+      name: 'Profile',
+      component: () => import('../components/User/Dashboard/Main/Dashboard/Profile.vue')
+    },
+
+    {
+      path: '/MapComponent',
+      name: 'MapComponent',
+      component: () => import('../components/User/Dashboard/Main/Dashboard/MapComponent.vue')
+    },
+
+
   ]
 })
 
