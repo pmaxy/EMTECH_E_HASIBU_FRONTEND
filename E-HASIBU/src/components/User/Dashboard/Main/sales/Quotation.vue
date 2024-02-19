@@ -5,7 +5,7 @@
      <router-link :to="{name :'Quotation_form'}" class="bg-red-800 hover :bg-red-500 text-white font-bold py-1 px-1 rounded">Add Form</router-link>
    
 </div>
-  <div class="p-4 flex justify-between items-center">
+  <!-- <div class="p-4 flex justify-between items-center">
     <div class="mt-4">
       <label class="rounded">Filter by Date</label>
        <select v-model="selectedDateRange"  class="p-2 bg-white-500 rounded shadow-lg">
@@ -22,7 +22,7 @@
       <input v-model="searchQuery" @input="filterData" type="text" placeholder="search..." class="p-2 bg-white-500 rounded shadow-lg">
 
     </div>
-    </div>
+    </div> -->
    <section class=" dark:bg-gray-900 sm:p-5">
     <div class="mx-auto max-w-screen-xl">
         <!-- Start coding here -->

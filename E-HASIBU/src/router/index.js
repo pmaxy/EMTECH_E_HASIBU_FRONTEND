@@ -9,6 +9,12 @@ const router = createRouter({
       component: () => import('../components/User/Dashboard/Dashboard.vue')
     },
     {
+      path: '/Login',
+      name: 'Login',
+      component: () => import('../components/User/Authentication/Verification.vue')
+    },
+
+    {
       path: '/Feedback',
       name: 'Feedback',
       component: () => import('../components/User/Dashboard/Main/Feedback.vue')
@@ -82,7 +88,7 @@ const router = createRouter({
     {
       path: '/Dashboard_home',
       name: 'Dashboard_home',
-      component: () => import('../components/User/Dashboard/Main/Dashboard_home.vue')
+      component: () => import('../components/User/Dashboard/Main/Dashboard/Dashboard_home.vue')
     },
 
     {
@@ -92,12 +98,42 @@ const router = createRouter({
     }
     ,
     {
-      path: '/Purchases',
-      name: 'Purchases',
-      component: () => import('../components/User/Dashboard/Main/Purchases.vue')
+      path: '/Purchase_Order',
+      name: 'Purchase_Order',
+      component: () => import('../components/User/Dashboard/Main/Purchases/Purchase_Order.vue')
+    },
+    {
+      path: '/Vendor_Details',
+      name: 'Vendor_Details',
+      component: () => import('../components/User/Dashboard/Main/Purchases/Vendor_Details.vue')
+    },
+    {
+      path: '/Purchase_Bill',
+      name: 'Purchase_Bill',
+      component: () => import('../components/User/Dashboard/Main/Purchases/Purchase_Bill.vue')
+    },
+    {
+      path: '/New_Bill',
+      name: 'New_Bill',
+      component: () => import('../components/User/Dashboard/Main/Purchases/Forms/New_Bill.vue')
+    },
+    {
+      path: '/Paid_Bill' ,
+      name: 'Paid_Bill',
+      component: () => import('../components/User/Dashboard/Main/Purchases/Forms/Paid_Bill.vue')
+    },
+    {
+      path: '/Profile',
+      name: 'Profile',
+      component: () => import('../components/User/Dashboard/Main/Dashboard/Profile.vue')
     },
 
-   
+    {
+      path: '/MapComponent',
+      name: 'MapComponent',
+      component: () => import('../components/User/Dashboard/Main/Dashboard/MapComponent.vue')
+    },
+
 
   ]
 })
