@@ -116,7 +116,7 @@ export default {
       amount() {
          return this.quantity * this.rate;
       }
-   }
+   },
     }
     
 
