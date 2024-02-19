@@ -1,4 +1,3 @@
-
 <template>
 <div class="h-screen overflow-y-scroll">
   <h1 class="bg-white text-red-800 text-center">PURCHASES ORDER</h1>
@@ -98,45 +97,8 @@
 
 <script>
 export default {
-    name:"PURCHASES",
-    data() {
-      return {
-         formvalues: {
-            buyerName:'',
-            email:'',
-         },
-            rows: [
-               ['', '', '', '', '',]
-            ],
-            quantity: 0,
-            rate: 0,
-         }
-      },
-      methods: {
-         removeItem(index) {
-            this.rows.splice(index,1)
-         },
-         addItem(){
-            this.rows.push(['', '', '', '', '',])
-         },
-         cancel(){
-
-         },
-         submit(){
-
-         }
-  },
-   computed:{
-      amount() {
-         return this.quantity * this.rate;
-      }
-   }
-    }
-    
-
-
-
-      
+     name:"Purchases"
+}
 </script>
 
 <style>

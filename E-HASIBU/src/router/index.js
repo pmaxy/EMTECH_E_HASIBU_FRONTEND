@@ -6,19 +6,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'Dashboard',
-      component: () => import('../components/User/Dashboard/Dashboard.vue'),
+      component: () => import('../components/User/Dashboard/Dashboard.vue')
     },
-
-    // {
-    //   path: '/login',
-    //   name: 'login',
-    //   component: () => import('../components/User/Authentication/login.vue')
-    // },
-    // {
-    //   path: '/PasswordReset',
-    //   name: 'PasswordReset',
-    //   component: () => import('../components/User/Authentication/PasswordReset.vue')
-    // },
     {
       path: '/Login',
       name: 'Login',
@@ -29,12 +18,6 @@ const router = createRouter({
       path: '/Feedback',
       name: 'Feedback',
       component: () => import('../components/User/Dashboard/Main/Feedback.vue')
-    },
-
-    {
-      path: '/Profile',
-      name: 'Profile',
-      component: () => import('../components/User/Dashboard/Main/Dashboard/Profile.vue')
     },
 
     {
