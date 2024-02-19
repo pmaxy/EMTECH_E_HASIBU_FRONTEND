@@ -14,10 +14,18 @@
              
             </li>
             <li  class="list_button  ">
-              <router-link :to="{name:'Sales'}" class="p-2 bg-white rounded-lg  flex gap-2 items-center row hover:scale-[1.05]">
-                <img src="@\assets\internship-3833168-3185247.png" class="w-10 bg-red-800 rounded-lg p-2" alt="dashboard">
+              <div class="">
+                <div @click='closeNav' class="p-2 bg-white rounded-lg  flex gap-2 items-center row hover:scale-[1.05]">
+                 <img src="@\assets\internship-3833168-3185247.png" class="w-10 bg-red-800 rounded-lg p-2" alt="dashboard">
                 <span>Sales</span>
-              </router-link>   
+                </div>
+               <ul v-if="isHidden" class='p-2 flex flex-col gap-1 ' >
+                 <li class='bg-white rounded-lg p-2 hover:scale-[1.03] shadow-lg' ><router-link :to="{name:'Quotation'}"> Quotation</router-link></li>
+                  <li class='bg-white rounded-lg p-2 hover:scale-[1.03] shadow-lg' > <router-link :to="{name:'Invoice'}"> Invoice</router-link></li>
+                  <li class='bg-white rounded-lg p-2 hover:scale-[1.03] shadow-lg' > <router-link :to="{name:'Customer Information'}"> Customer Information</router-link></li>
+                  <li class='bg-white rounded-lg p-2 hover:scale-[1.03] shadow-lg' > <router-link :to="{name:'Payment Details'}"> Payment Details</router-link></li>
+               </ul>
+              </div>   
              
             </li>
 
@@ -100,7 +108,28 @@
   <script>
   export default {
   
-      name:"Sidebar"
+      name:"Sidebar",
+      props:{
+        isHidden:{
+          type:Boolean
+        }
+      
+      },
+
+      data() {
+        return{
+          isHidden:false,
+        }
+      },
+      
+      
+
+      methods:{
+        closeNav(){
+            this.isHidden=!this.isHidden;
+        }
+        
+      }
   
   }
   </script>
