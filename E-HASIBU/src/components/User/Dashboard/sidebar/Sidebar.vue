@@ -108,11 +108,31 @@
   <script>
   export default {
   
-      name:"Sidebar"
+      name:"Sidebar",
+
+      props:{
+        isHidden:{
+          type:Boolean}
+      },
+
+        data(){
+        return{
+           isHidden:false
+        }
+        
+
+      },
+          methods:{
+
+        closeNav(){ 
+           this.isHidden=!this.isHidden
+        }
+
+      },
   
   }
   </script>
   
-  <style>
+  <style scoped>
   
   </style>
