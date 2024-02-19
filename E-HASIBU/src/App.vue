@@ -3,19 +3,19 @@
 <!--<StartUpPage />-->
  <!--<SignUp />-->
  <!--<CreatePassword />-->
- <StartUpPage />
+ <dashboard />
   
 </template>
 
 <script>
-import StartUpPage from './components/User/Authentication/StartUpPage.vue'
+import Dashboard from './components/User/Dashboard/Dashboard.vue'
 
 
 export default {
 
      name:'App',
      components:{
-      StartUpPage,
+      Dashboard,
 
      }
       
