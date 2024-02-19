@@ -3,7 +3,7 @@
 <!--<StartUpPage />-->
  <!--<SignUp />-->
  <!--<CreatePassword  />-->
- <dashboard />
+ <Dashboard />
   
 </template>
 

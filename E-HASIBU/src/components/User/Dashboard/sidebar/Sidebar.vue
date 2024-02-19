@@ -22,11 +22,19 @@
             </li>
 
             <li  class="list_button  ">
-              <router-link :to="{name:'Purchases'}" class="p-2 bg-white rounded-lg bg-gradient-to-br from-white to-red-50 flex gap-2 items-center row hover:scale-[1.05]">
-                <img src="@\assets\internship-3833168-3185247.png" class="w-10 bg-gradient-to-br from-red-500 to-red-900 rounded-lg p-2" alt="dashboard">
+              <div>
+                <div @click="closeNav" class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05]">
+              
+                <img src="@\assets\internship-3833168-3185247.png"  class="w-10 bg-red-800 rounded-lg p-2" alt="dashboard">
                 <span>Purchases</span>
-              </router-link>   
-             
+                </div>
+                <ul v-if="isHidden" class="p-2 flex flex-col gap-1">
+                  <li class="bg-white rounded-lg p-2 hover:scale-[1.03] shadow-lg"><router-link :to="{name:'Purchase_Order'}">Purchase order</router-link></li>
+                  <li class="bg-white rounded-lg p-2 hover:scale-[1.03] shadow-lg"><router-link :to="{name:'Vendor_Details'}">Vendor Details</router-link></li>
+                  <li class="bg-white  rounded-lg p-2 hover:scale-[1.03] shadow-lg"><router-link :to="{name:'Purchase_Bill'}">Purchase Bill </router-link></li>
+                </ul>
+              </div>
+              
             </li>    <li  class="list_button  ">
               <router-link :to="{name:'Inventory'}" class="p-2 bg-white rounded-lg bg-gradient-to-br from-white to-red-50 flex gap-2 items-center row hover:scale-[1.05]">
                 <img src="@\assets\internship-3833168-3185247.png" class="w-10 bg-gradient-to-br from-red-500 to-red-900 rounded-lg p-2" alt="dashboard">
@@ -100,11 +108,31 @@
   <script>
   export default {
   
-      name:"Sidebar"
+      name:"Sidebar",
+
+      props:{
+        isHidden:{
+          type:Boolean}
+      },
+
+        data(){
+        return{
+           isHidden:false
+        }
+        
+
+      },
+          methods:{
+
+        closeNav(){ 
+           this.isHidden=!this.isHidden
+        }
+
+      },
   
   }
   </script>
   
-  <style>
+  <style scoped>
   
   </style>
