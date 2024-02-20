@@ -125,7 +125,8 @@
 
         data(){
         return{
-           isHidden:false
+           isHidden:false,
+           isHidden1:false
         }
         
 
