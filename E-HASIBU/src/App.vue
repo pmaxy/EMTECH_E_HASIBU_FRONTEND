@@ -1,6 +1,8 @@
 <template>
  
-
+<!--<StartUpPage />-->
+ <!--<SignUp />-->
+ <!--<CreatePassword  />-->
  <Dashboard />
   
 </template>
@@ -14,9 +16,11 @@ export default {
      name:'App',
      components:{
       Dashboard,
+
      }
       
-}    
+} 
+   
 </script>
 
 <style>
