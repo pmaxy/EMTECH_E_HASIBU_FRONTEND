@@ -1,8 +1,7 @@
 <template>
 
   <div class="grid grid-col-2 lg:grid-row-5 m-auto  gap-3 p-3   w-full ">
-    <ul class="lg:row-start-1 pb-1 lg:row-end-2 items-center w-full justify-start grid-col-1"
->
+    <ul class="lg:row-start-1 pb-1 lg:row-end-2 items-center w-full justify-start grid-col-1">
   <li>
     <h2 class="font-medium italic"> <font-awesome-icon
               :icon="['fas', 'house-user']"
@@ -392,7 +391,6 @@
     </ul>
   </div>
 </template>
-
 <script>
 import VueApexCharts from "vue3-apexcharts";
 import salesChart from "./salesChart.vue";

@@ -76,8 +76,14 @@ const router = createRouter({
     {
       path: '/Inventory',
       name: 'Inventory',
-      component: () => import('../components/User/Dashboard/Main/Inventory.vue')
+      component: () => import('../components/User/Dashboard/Main/Inventory/Inventory.vue')
     },
+    {
+      path: '/Inventoryform',
+      name: 'Inventoryform',
+      component: () => import('../components/User/Dashboard/Main/Inventory/Inventoryform.vue')
+    },
+    
 
     {
       path: '/Expenses',
@@ -94,7 +100,7 @@ const router = createRouter({
     {
       path: '/Accounts',
       name: 'Accounts',
-      component: () => import('../components/User/Dashboard/Main/Accounts.vue')
+      component: () => import('../components/User/Dashboard/Main/Accounts/Accounts.vue')
     }
     ,
     {
@@ -133,8 +139,11 @@ const router = createRouter({
       name: 'MapComponent',
       component: () => import('../components/User/Dashboard/Main/Dashboard/MapComponent.vue')
     },
-
-
+    {
+      path: '/AccountForm',
+      name: 'AccountForm',
+      component: () => import('../components/User/Dashboard/Main/AccountForm.vue')
+    }
   ]
 })
 
