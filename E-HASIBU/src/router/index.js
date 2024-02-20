@@ -61,13 +61,18 @@ const router = createRouter({
     {
       path: '/Accounts',
       name: 'Accounts',
-      component: () => import('../components/User/Dashboard/Main/Accounts.vue')
+      component: () => import('../components/User/Dashboard/Main/Accounts/Accounts.vue')
     }
     ,
     {
       path: '/Purchases',
       name: 'Purchases',
       component: () => import('../components/User/Dashboard/Main/Purchases.vue')
+    },
+    {
+      path: '/AccountForm',
+      name: 'AccountForm',
+      component: () => import('../components/User/Dashboard/Main/AccountForm.vue')
     }
   ]
 })
