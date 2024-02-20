@@ -94,7 +94,7 @@ const router = createRouter({
     {
       path: '/Accounts',
       name: 'Accounts',
-      component: () => import('../components/User/Dashboard/Main/Accounts.vue')
+      component: () => import('../components/User/Dashboard/Main/Accounts/Accounts.vue')
     }
     ,
     {
@@ -133,8 +133,11 @@ const router = createRouter({
       name: 'MapComponent',
       component: () => import('../components/User/Dashboard/Main/Dashboard/MapComponent.vue')
     },
-
-
+    {
+      path: '/AccountForm',
+      name: 'AccountForm',
+      component: () => import('../components/User/Dashboard/Main/AccountForm.vue')
+    }
   ]
 })
 
