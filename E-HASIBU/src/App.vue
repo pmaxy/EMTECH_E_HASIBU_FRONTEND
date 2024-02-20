@@ -19,7 +19,8 @@ export default {
      Dashboard
 }
       
-}    
+} 
+   
 </script>
 
 <style>
