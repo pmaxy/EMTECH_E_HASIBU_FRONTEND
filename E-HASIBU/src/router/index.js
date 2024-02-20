@@ -76,14 +76,8 @@ const router = createRouter({
     {
       path: '/Inventory',
       name: 'Inventory',
-      component: () => import('../components/User/Dashboard/Main/Inventory/Inventory.vue')
+      component: () => import('../components/User/Dashboard/Main/Inventory.vue')
     },
-    {
-      path: '/Inventoryform',
-      name: 'Inventoryform',
-      component: () => import('../components/User/Dashboard/Main/Inventory/Inventoryform.vue')
-    },
-    
 
     {
       path: '/Expenses',
