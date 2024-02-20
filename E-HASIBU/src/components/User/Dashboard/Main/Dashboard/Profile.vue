@@ -1,13 +1,12 @@
 <template>
 <div class="justify-start bg-white">
 
-<form class="max-w-xxl w-full">
-  <div class=" flex items-center w-full bg-red-900 py-3">
-    <div class="bg-gray-200 rounded-full px-3 py-3 mr-2 ml-2">
-    <font-awesome-icon :icon="['fa', 'user']" size="xl"/>
-    <font-awesome-icon :icon="['fa', 'camera']" size="2xs"/>
+<form class="max-w-xxl w-full pr-3 pl-3">
+  <div class=" flex items-center w-full py-3 rounded-xl bg-gray-200">
+    <div class="bg-gray-200 outline outline-1 rounded-full px-3 py-1.5 mr-4 ml-4">
+    <font-awesome-icon :icon="['fa', 'user']" size="xxl" :style="{color:'maroon'}"/>
   </div>
-  <h2 class="text-white font-semibold">Welcome, {{formValues.firstName}} {{formValues.lastName}}</h2>
+  <h2 class="text-red-900 font-bold">{{formValues.firstName}} {{formValues.lastName}}</h2>
  </div>
   <h2 class="font-bold text-bs text-red-900">Personal Details</h2>
 
