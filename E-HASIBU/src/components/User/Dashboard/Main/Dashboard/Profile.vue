@@ -6,8 +6,14 @@
     <div class="bg-gray-200 outline outline-1 rounded-full px-3 py-1.5 mr-4 ml-4">
     <font-awesome-icon :icon="['fa', 'user']" size="xxl" :style="{color:'maroon'}"/>
   </div>
+
+<div>
+  
   <h2 class="text-red-900 font-bold">{{formValues.firstName}} {{formValues.lastName}}</h2>
- </div>
+  <h2 class="text-red-900 font-bold">{{ formValues.email }}</h2>
+  <h2>{{formValues.phoneNo }}</h2>
+</div>
+</div>
   <h2 class="font-bold text-bs text-red-900">Personal Details</h2>
 
     <div class="grid md:grid-cols-2 md:gap-6">
@@ -104,9 +110,9 @@ export default {
     formValues:{
       firstName:'John',
       lastName:'Doe',
-      email:'',
+      email:'johndoe@gmail.com',
       nationalID:'',
-      phoneNo:'',
+      phoneNo:12345678,
       businessName:'',
       company:'',
       VATReg:'',
