@@ -1,8 +1,7 @@
 <template>
 
   <div class="grid grid-col-2 lg:grid-row-5 m-auto  gap-3 p-3   w-full ">
-    <ul class="lg:row-start-1 pb-1 lg:row-end-2 items-center w-full justify-start grid-col-1"
->
+    <ul class="lg:row-start-1 pb-1 lg:row-end-2 items-center w-full justify-start grid-col-1">
   <li>
     <h2 class="font-medium italic"> <font-awesome-icon
               :icon="['fas', 'house-user']"
@@ -15,7 +14,7 @@
     >
       <li class="list_button flex md:col-start-1 md:col-end-2">
         <router-link
-          :to="{ name: 'Sales' }"
+          :to="{ name: 'Quotation' }"
           class="p-2 bg-white rounded-lg gap-2 items-center row hover:scale-[1.05] flex bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
@@ -33,7 +32,7 @@
 
       <li class="list_Button flex md:col-start-2 md:col-end-3">
         <router-link
-          :to="{ name: 'Sales' }"
+          :to="{ name: 'Quotation' }"
           class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
@@ -53,7 +52,7 @@
 
       <li class="list_Button flex md:col-start-3 md:col-end-4">
         <router-link
-          :to="{ name: 'Sales' }"
+          :to="{ name: 'Quotation' }"
           class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
@@ -97,7 +96,7 @@
         class="list_Button flex lg:col-start-5 lg:col-end-6 md:col-start-2 md:col-end-3"
       >
         <router-link
-          :to="{ name: 'Sales' }"
+          :to="{ name: 'Quotation' }"
           class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
@@ -119,7 +118,7 @@
         class="list_Button flex lg:col-start-6 lg:col-end-7 md:col-start-3 md:col-end-4"
       >
         <router-link
-          :to="{ name: 'Sales' }"
+          :to="{ name: 'Quotation' }"
           class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
@@ -392,7 +391,6 @@
     </ul>
   </div>
 </template>
-
 <script>
 import VueApexCharts from "vue3-apexcharts";
 import salesChart from "./salesChart.vue";
