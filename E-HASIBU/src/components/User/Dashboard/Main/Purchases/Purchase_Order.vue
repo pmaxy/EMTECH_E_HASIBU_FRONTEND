@@ -1,6 +1,6 @@
 
 <template>
-<div class="h-screen overflow-y-scroll">
+<div >
   <h1 class="bg-white text-red-800 text-center">PURCHASES ORDER</h1>
   
  <form @submit.prevent="submitformValues">
@@ -53,7 +53,11 @@
         </thead>
       <tbody>
       <tr v-for="(row, index) in rows" :key="index">
-      <td v-for="(cell, cellIndex) in row" :key="cellIndex" class="border border-red-800 p-2" >{{cell}}</td>
+         <td class="pl-2 pr-2 pb-2 pt-2 mr-10 ml-10">{{ row.item }}</td>
+         <td class="pl-2 pr-2 pb-2 pt-2 mr-10 ml-10">{{ row.description }}</td>
+         <td class="pl-2 pr-2 pb-2 pt-2 mr-10 ml-10">{{ row.quantity }}</td>
+         <td class="pl-2 pr-2 pb-2 pt-2 mr-10 ml-10">{{ row.rate }}</td>
+         <td class="pl-2 pr-2 pb-2 pt-2 mr-10 ml-10">{{ row.amount }}</td>
       </tr>
       </tbody>
       </table>
@@ -63,6 +67,7 @@
    </div>
    </div> 
       <div>
+         <form a>
          <label for="item"> Item </label>
          <input v-model="item" type="text" id=" item"/>
          <label for="quantity">Quantity</label>
@@ -72,12 +77,13 @@
          <label for="amount"> Amount </label>
          <input v-model="amount" type="number" id=" amount" readonly/>
          <p>calculated Amount: {{amount}}</p>
+         </form>
       </div>
       <div class="text-center font-bold">
       <button @click="cance" class="text-white bg-red-800 w-25 rounded ml-4 mr-4 mt-2 mb-2 w-20 box-shadow-50">Cance</button>
       <button @click="submit" class="text-white bg-red-800 w-25 rounded ml-4 mr-4 w-20 box-shadow-50" >Submit</button>
       </div>
-      <br><br><br>
+      <br><br>
  </form>
     </div>
 </template>
@@ -103,6 +109,7 @@ export default {
             this.rows.splice(index,1)
          },
          addItem(){
+            const itemToAdd ={ ...this.newItem}
             this.rows.push(['', '', '', '', '',])
          },
          cancel(){
@@ -112,11 +119,6 @@ export default {
 
          }
   },
-   computed:{
-      amount() {
-         return this.quantity * this.rate;
-      }
-   },
     }
     
 

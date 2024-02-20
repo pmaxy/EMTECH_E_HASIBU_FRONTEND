@@ -16,6 +16,8 @@
         <option value=">10">Partially Paid Bills</option>
         <option value=">10">Overdue Bills</option>
         <option value=">10">Unpaid Bills</option>
+        <option value=">10">Open Bills</option>
+        <option value=">10">Draft Bills</option>
       </select>
     </div> <br>
 
@@ -38,10 +40,10 @@
       </tbody>
     </table>
 
-    <div class="pagination">
-      <button @click="prevPage">Previous</button>
+    <div class="pagination" >
+      <button @click="prevPage" class="bg-red-800 text-white font-bold">Previous</button>
       <span>{{ currentPage }} / {{ totalPages }}</span>
-      <button @click="nextPage">Next</button>
+      <button @click="nextPage" class="bg-red-800 text-white font-bold">Next</button>
     </div>
   </div>
 </div>
