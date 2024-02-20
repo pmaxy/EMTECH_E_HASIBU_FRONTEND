@@ -1,5 +1,5 @@
 <template>
-   <div class="h-screen overflow-y-scroll">
+   <div class="h-screen overflow-y-scroll ml-5 mr-5">
     <div>
   <h2 class="text-center font-bold">ALL QUOTATIONS</h2>
      <router-link :to="{name :'Quotation_form'}" class="bg-red-800 hover :bg-red-500 text-white font-bold py-1 px-1 rounded">Add Form</router-link>
