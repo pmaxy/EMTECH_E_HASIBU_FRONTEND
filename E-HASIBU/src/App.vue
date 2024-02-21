@@ -1,7 +1,10 @@
 <template>
-  <Dashboard />
-  </template>
-  
+ 
+<!--<StartUpPage />-->
+ <!--<SignUp />-->
+ <!--<CreatePassword  />-->
+ <Dashboard />
+</template> 
 
   <script>
 import  Dashboard from './components/User/Dashboard/Dashboard.vue'
@@ -9,9 +12,13 @@ import  Dashboard from './components/User/Dashboard/Dashboard.vue'
     name:"App",
     components:{
       Dashboard,
-    }
-}
-  </script>
-    <style>
+
+     }
+      
+} 
+   
+</script>
+
+<style>
+
 </style>
-  
