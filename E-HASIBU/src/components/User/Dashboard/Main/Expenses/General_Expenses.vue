@@ -95,7 +95,7 @@
                             <th scope="col" class="px-4 py-3">Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+        <tbody>
                     <tr v-for="(Item ,index) in Items"  :key="index"   class="border-b dark:border-gray-700">
                         <td  class="px-4 py-3" >
                             <input type="text" v-model="  Item.name" id=" ItemName">

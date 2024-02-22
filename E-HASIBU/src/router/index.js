@@ -101,11 +101,7 @@ const router = createRouter({
       name: 'Payroll',
       component: () => import('../components/User/Dashboard/Main/Expenses/Forms/Payroll.vue')
     },
-    {
-      path: '/general_expenses',
-      name: 'general_expenses',
-      component: () => import('../components/User/Dashboard/Main/Expenses/Forms/general_expenses.vue')
-    },
+  
     {
       path: '/General_Expenses',
       name: 'General_Expenses',

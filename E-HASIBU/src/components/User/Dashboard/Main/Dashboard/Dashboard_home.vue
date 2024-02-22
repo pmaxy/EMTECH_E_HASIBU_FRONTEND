@@ -74,7 +74,7 @@
         class="list_Button flex lg:col-start-4 lg:col-end-5 md:col-start-1 md:col-end-2"
       >
         <router-link
-          :to="{ name: 'general_expenses' }"
+          :to="{ name: 'General_Expenses' }"
           class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
