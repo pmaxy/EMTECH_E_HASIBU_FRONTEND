@@ -4,17 +4,13 @@
  <!--<SignUp />-->
  <!--<CreatePassword  />-->
  <Dashboard />
-  
-</template>
+</template> 
 
-<script>
-import Dashboard from './components/User/Dashboard/Dashboard.vue'
-
-
-export default {
-
-     name:'App',
-     components:{
+  <script>
+import  Dashboard from './components/User/Dashboard/Dashboard.vue'
+  export default {
+    name:"App",
+    components:{
       Dashboard,
 
      }
