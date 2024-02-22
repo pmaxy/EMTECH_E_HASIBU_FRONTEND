@@ -1,7 +1,7 @@
 <template>
 <div class="justify-start bg-white">
 
-<form class="max-w-xxl w-full pr-3 pl-3">
+<form @submit.prevent="handleSubmit" class="max-w-xxl w-full pr-3 pl-3">
   <div class=" flex items-center w-full py-3 rounded-xl bg-gray-200">
     <div class="bg-gray-200 outline outline-1 rounded-full px-3 py-1.5 mr-4 ml-4">
     <font-awesome-icon :icon="['fa', 'user']" size="xxl" :style="{color:'maroon'}"/>
@@ -124,11 +124,12 @@ export default {
     }
   },
   methods:{
-     
-
-  }
+    handleSubmit(event) {
+      event.preventDefault()}
 
 }
+}
+
 </script>
 
 <style>
