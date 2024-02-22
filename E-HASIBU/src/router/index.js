@@ -30,12 +30,43 @@ const router = createRouter({
       name: 'Settings',
       component: () => import('../components/User/Dashboard/Main/Settings.vue')
     },
+   
+        {path: '/Quotation',
+         name: 'Quotation',
+         component: () => import('../components/User/Dashboard/Main/sales/Quotation.vue'),
+        },
+        {path: '/SalesDashboard',
+        name: 'SalesDashboard',
+        component: () => import('../components/User/Dashboard/Main/Dashboard/SalesDashboard.vue'),
+       }
+      
+    ,
     {
-      path: '/Sales',
-      name: 'Sales',
-      component: () => import('../components/User/Dashboard/Main/Sales.vue')
+      path: '/Quotation_form',
+      name: 'Quotation_form',
+      component: () => import('../components/User/Dashboard/Main/sales/forms/Quotation_form.vue')
+    },
+    {
+      path: '/Customer_info_form',
+      name: 'Customer_info_form',
+      component: () => import('../components/User/Dashboard/Main/sales/forms/Customer_info_form.vue')
     },
 
+    {path: '/Invoice',
+    name: 'Invoice',
+    component: () => import('../components/User/Dashboard/Main/sales/Invoice.vue'),
+   }
+   ,
+    {path: '/Customer Information',
+    name: 'Customer Information',
+    component: () => import('../components/User/Dashboard/Main/sales/Customer Information.vue'),
+   }
+  ,
+   {path: '/Payment Details',
+    name: 'Payment Details',
+    component: () => import('../components/User/Dashboard/Main/sales/Payment Details.vue'),
+   }
+   ,
     {
       path: '/Returns',
       name: 'Returns',
@@ -49,8 +80,14 @@ const router = createRouter({
     {
       path: '/Inventory',
       name: 'Inventory',
-      component: () => import('../components/User/Dashboard/Main/Inventory.vue')
+      component: () => import('../components/User/Dashboard/Main/Inventory/Inventory.vue')
     },
+    {
+      path: '/Inventoryform',
+      name: 'Inventoryform',
+      component: () => import('../components/User/Dashboard/Main/Inventory/Inventoryform.vue')
+    },
+    
 
     {
       path: '/Expenses',
@@ -67,7 +104,7 @@ const router = createRouter({
     {
       path: '/Accounts',
       name: 'Accounts',
-      component: () => import('../components/User/Dashboard/Main/Accounts.vue')
+      component: () => import('../components/User/Dashboard/Main/Accounts/Accounts.vue')
     }
     ,
     {
@@ -106,8 +143,11 @@ const router = createRouter({
       name: 'MapComponent',
       component: () => import('../components/User/Dashboard/Main/Dashboard/MapComponent.vue')
     },
-
-
+    {
+      path: '/AccountForm',
+      name: 'AccountForm',
+      component: () => import('../components/User/Dashboard/Main/AccountForm.vue')
+    }
   ]
 })
 
