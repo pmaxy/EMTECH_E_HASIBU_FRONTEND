@@ -46,7 +46,7 @@
       <tbody>
         <tr v-for="(product, index) in products" :key="index" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 ">
           <td class=" font-medium text-gray-900 dark:text-white">
-            <select  v-model="product.ProductId" class="form-control rounded" type="text"></select>
+            <select  v-model="product.ProductId" class="form-control rounded w-10" type="text"></select>
           </td>
           <td class="">
             <input v-model="product.ProductName" class="form-control rounded" type="text" />
