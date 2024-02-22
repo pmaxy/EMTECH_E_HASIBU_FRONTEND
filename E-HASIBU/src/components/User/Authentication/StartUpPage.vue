@@ -18,7 +18,7 @@
 
     <div class="flex gap-4">
      <button class="bg-white-200  rounded-xl pl-2 pr-2  text-red-900 hover:scale-[1.05] outline outline-offset-2 outline-1" >Sign In</button>
-     <button class="bg-white-200  rounded-xl pl-2 pr-2  text-red-900 hover:scale-[1.05] outline outline-offset-2 outline-1">Log In</button>
+     <button class="bg-white-200  rounded-xl pl-2 pr-2  text-red-900 hover:scale-[1.05] outline outline-offset-2 outline-1"><router-link :to="{name:'SignUp' }">Log In</router-link></button>
     </div>
     </div>
    
