@@ -8,19 +8,19 @@
  <form @submit.prevent="submitformValues">
   <div class="bg-white mt-3 mb-3 mr-10 ml-5 text-red-800 rounded">
       <label for="vendorName" class="ml-3 mb-2"> Vendor Name: </label>
-      <input type="text" id="vendorName" class="bg-gray-200 mt-5 ml-3 mr-2 mb-3 w-60 rounded w-30 pl-2" placeholder="Start typing to select name" v-model="formvalues.vendorName">
-       <select to="vendorDetails"  class="bg-white text-red-800 ml-5 mr-10 mt-2 rounded"></select></div>
+      <input type="vendorName" id="vendorName" class="bg-gray-200 mt-5 ml-3 mr-2 mb-3 w-60 rounded w-30 pl-2" placeholder="Start typing to select name" v-model="formvalues.vendorName">
+       </div> <!---- router-link to the vendor details to get the vendor name--->
    <div class="bg-white text-red-800 ml-5 mr-10 mt-2 rounded ">
           <label for="billDate" class="ml-3 mb-2">Bill Date: </label>
          <input type="date" id="billDate" class="bg-gray-200 mb-3 ml-2 mt-5 mr-2 rounded w-50" placeholder="Bill Date"  v-model="formvalues.billDateDate"><br>
     </div>
     <div class="bg-white mt-3 mb-3 mr-10 ml-5 text-red-800 rounded">
     <label for="orderNumber" class="ml-3 mb-2">Order Number: </label>
-         <input type="text" id="orderNumber" class="bg-gray-200 ml-2 mt-5 mb-3 mr-2 rounded w-50" placeholder="orderNumber"  v-model="formvalues.orderNumber">
+         <input type="orderNumber" id="orderNumber" class="bg-gray-200 ml-2 mt-5 mb-3 mr-2 rounded w-50" placeholder="orderNumber"  v-model="formvalues.orderNumber">
     </div>
     <div class="bg-white mt-3 mb-3 mr-10 ml-5 text-red-800 rounded">
     <label for="amount" class="ml-3 mb-2">Amount: </label>
-         <input type="text" id="amount" class="bg-gray-200 ml-2 mt-5 mb-3 mr-2 rounded w-50" placeholder="Amount"  v-model="formvalues.amount">
+         <input type="index" id="amount" class="bg-gray-200 ml-2 mt-5 mb-3 mr-2 rounded w-50" placeholder="Amount"  v-model="formvalues.amount">
     </div>
     <div class="bg-white mt-3 mb-3 mr-10 ml-5 text-red-800 rounded">
       <label for="paymentMethods" class="ml-3 mb-2">Payment Methods</label>
@@ -32,7 +32,7 @@
     </div>
     <div class="bg-white mt-3 mb-3 mr-10 ml-5 text-red-800 rounded">
     <label for="dueDate" class="ml-3 mb-2">Due Date: </label>
-         <input type="text" id="dueDate" class="bg-gray-200 ml-2 mt-5 mb-3 mr-2 rounded w-50" placeholder="Due Date"  v-model="formvalues.dueDate">
+         <input type="date" id="dueDate" class="bg-gray-200 ml-2 mt-5 mb-3 mr-2 rounded w-50" placeholder="Due Date"  v-model="formvalues.dueDate">
     </div>
     <div>
     <label for="file-upload" class="text-white bg-red-800 w-25 rounded ml-4 mr-4 mt-2 mb-2 w-40 box-shadow-50">Upload Invoice: </label>
@@ -44,7 +44,7 @@
       </div>
       <div>
          <label for="item"> Item </label>
-         <input v-model="item" type="text" id=" item"/>
+         <input v-model="item" type="item" id=" item"/>
          <label for="quantity">Quantity</label>
          <input v-model="quantity" type="number" id="quantity"/>
          <label for="rate"> Rate </label>
