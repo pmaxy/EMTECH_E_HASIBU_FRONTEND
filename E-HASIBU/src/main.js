@@ -13,9 +13,11 @@ library.add(faPlus,faUser, faCamera,faHouseUser);
 
 
 
+
 const app = createApp(App)
+app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.use(router)
-app.component('font-awesome-icon', FontAwesomeIcon)
+
 
 app.mount('#app')
