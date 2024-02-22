@@ -16,6 +16,8 @@
     "@fortawesome/vue-fontawesome": "^3.0.6",
     "flowbite": "^2.3.0",
     "leaflet": "^1.9.4",
+    "main": "^1000.0.1",
+    "origin": "^0.8.6",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5",
     "vue3-apexcharts": "^1.5.2",
