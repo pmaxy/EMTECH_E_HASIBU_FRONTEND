@@ -1,13 +1,13 @@
 <template>
   <h1 class="text-center font-bold ">ALL CUSTOMERS</h1>
-  <router-link :to="{name :'Customer_info_form'}" class="bg-red-800 hover :bg-red-500 text-white font-bold py-1 px-1 rounded">Add Customer</router-link>
-  <div>
+  <router-link :to="{name :'Customer_info_form'}" class="bg-red-800 hover:bg-gray-400 text-white font-bold py-1 px-1 rounded">Add Customer</router-link>
+  <div class="shadow-lg bg-white">
   <section class=" dark:bg-gray-900 sm:p-5">
     <div class="mx-auto max-w-screen-xl">
         <!-- Start coding here -->
-        <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
+        <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden ">
             <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
-                <div class="w-full md:w-1/2">
+                <div class="w-full md:w-1/2 ">
                     <form class="flex items-center">
                         <label for="simple-search" class="sr-only">Search</label>
                         <div class="relative w-full">
@@ -70,23 +70,22 @@ export default {
     return{ 
       searchQuery: '',
         tableData: [
-          {customerName: 'John Doe', phoneNumber: '254-728-788-990'},
-          {customerName: 'Jane Doe', phoneNumber: '254-728-788-870'},
-          {customerName: 'Grace Doe', phoneNumber: '254-762-788-990'},
-          {customerName: 'Mark Doe', phoneNumber: '254-728-928-930'},
-          {customerName: 'Joy Doe', phoneNumber: '254-789-783-991'},
+          {customerName: 'John Doe', phoneNumber: '0728788990'},
+          {customerName: 'Jane Doe', phoneNumber: '0728788870'},
+          {customerName: 'Grace Doe', phoneNumber: '0762788990'},
+          {customerName: 'Mark Doe', phoneNumber: '0728928930'},
+          {customerName: 'Joy Doe', phoneNumber: '0789783991'},
 
         ],
+        originalTableData: [
+        {customerName: 'John Doe', phoneNumber: '0728788990'},
+          {customerName: 'Jane Doe', phoneNumber: '0728788870'},
+          {customerName: 'Grace Doe', phoneNumber: '0762788990'},
+          {customerName: 'Mark Doe', phoneNumber: '0728928930'},
+          {customerName: 'Joy Doe', phoneNumber: '0789783991'},
+
+        ]
     }
-   },
-   computed: {
-    filteredTableData() {
-      return this.tableData.filter(row => {
-        const searchTerm = this.searchQuery.toLowerCase();
-        return row.quotationNumber.toLowerCase().includes(searchTerm) ||
-               row.status.toLowerCase().includes(searchTerm);
-      });
-    },
    },
    methods: {
    deleteRow(index) {
@@ -95,12 +94,27 @@ export default {
    },
    handleEditClick(row) {
       if (confirm("Are you sure you want to edit this quote?")) {
-        // Navigate to edit page (update routing based on your setup)
+        
         this.$router.push({ name: "Quotation_edit", params: { id: row.id } });
       }
     },
-   
- }
+    filterData() {
+      if (this.searchQuery) {
+        this.tableData = this.tableData.filter((row) => {
+          const searchText = this.searchQuery.toLowerCase();
+          return (
+            row.customerName.toLowerCase().includes(searchText) ||
+            row.phoneNumber.toLowerCase().includes(searchText)
+          );
+        });
+      } else {
+        // Reset tableData to full list if no search query
+        this.tableData = [...this.originalTableData]; // Use a copy to avoid mutations
+      }
+    },
+     
+  },
+ 
 }
 </script>
 
