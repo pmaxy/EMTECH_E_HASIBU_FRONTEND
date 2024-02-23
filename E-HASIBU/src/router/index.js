@@ -174,7 +174,12 @@ const router = createRouter({
         {path: '/SalesDashboard',
         name: 'SalesDashboard',
         component: () => import('../components/User/Dashboard/Main/Dashboard/SalesDashboard.vue'),
-       }
+       },
+       {
+        path: '/Invoice_form',
+        name: 'Invoice_form',
+        component: () => import('../components/User/Dashboard/Main/sales/forms/Invoice_form.vue')
+      },
           ]
         
     },
