@@ -62,14 +62,27 @@
                 <img src="@\assets\internship-3833168-3185247.png" class="w-10 bg-gradient-to-br from-red-500 to-red-900 rounded-lg p-2" alt="dashboard">
                 <span>Budget</span>
               </router-link>   
-             
+            
             </li>    
+
             <li  class="list_button  ">
-              <router-link :to="{name:'Expenses'}" class="p-2 bg-white rounded-lg  bg-gradient-to-br from-white to-red-50 flex gap-2 items-center row hover:scale-[1.05]">
-                <img src="@\assets\internship-3833168-3185247.png" class="w-10 bg-gradient-to-br from-red-500 to-red-900 rounded-lg p-2" alt="dashboard">
+              <div>
+              <div @click="closeNav2" class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1-05]">
+                <img src="@\assets\internship-3833168-3185247.png" class="w-10 bg-red-800 rounded-lg p-2" alt="dashboard">
                 <span>Expenses</span>
-              </router-link>   
-             
+              </div>
+          
+                <ul v-if="isHidden2" class="p-2 flex flex-col gap-1">
+                  <li class=" bg-white rounded-lg p-2 hover:scale-[1.03] shadow-lg">
+                    <router-link  :to="{name:'General_Expenses'}">General Expenses</router-link>
+                  </li>
+                  <li class=" bg-white rounded-lg p-2 hover:scale-[1.03] shadow-lg">
+                    <router-link  :to="{name:'PayTable'}">Pay Table</router-link>
+                  </li>
+                  
+                </ul>
+            
+            </div>
             </li>    
             <li  class="list_button  ">
               <router-link :to="{name:'Reports'}" class="p-2 bg-white rounded-lg bg-gradient-to-br from-white to-red-50 flex gap-2 items-center row hover:scale-[1.05]">
@@ -126,7 +139,8 @@
         data(){
         return{
            isHidden:false,
-           isHidden1:false
+           isHidden1:false,
+           isHidden2:false
         }
         
 
@@ -139,11 +153,14 @@
         
            closeNav1(){ 
            this.isHidden1=!this.isHidden1
+        },
+
+        closeNav2(){ 
+           this.isHidden2=!this.isHidden2
         }
 
-      },
+      }  }
   
-  }
   </script>
   
   <style scoped>

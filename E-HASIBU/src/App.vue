@@ -3,23 +3,21 @@
 <!--<StartUpPage />-->
  <!--<SignUp />-->
  <!--<CreatePassword  />-->
- <Dashboard />
-  
-</template>
+<routerView></routerView>
 
-<script>
-import Dashboard from './components/User/Dashboard/Dashboard.vue'
+</template> 
 
-
-export default {
-
-     name:'App',
-     components:{
-      Dashboard,
+  <script>
+import StartUpPage from './components/User/Authentication/StartUpPage.vue';
+  export default {
+    name:"App",
+    components:{
+      StartUpPage
 
      }
       
-}    
+} 
+   
 </script>
 
 <style>
