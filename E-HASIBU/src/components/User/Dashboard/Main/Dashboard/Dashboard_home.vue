@@ -31,8 +31,12 @@
       </li>
 
       <li class="list_Button flex md:col-start-2 md:col-end-3">
+<<<<<<< HEAD
+        <router-link :to="{ name: 'Quotation' }"
+=======
         <router-link
-          :to="{ name: 'Quotation' }"
+          :to="{ name: 'SalesDashboard' }"
+>>>>>>> a22899176d03257de31c5b64cb39afcba5637c16
           class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
@@ -74,7 +78,7 @@
         class="list_Button flex lg:col-start-4 lg:col-end-5 md:col-start-1 md:col-end-2"
       >
         <router-link
-          :to="{ name: 'Expenses' }"
+          :to="{ name: 'general_expenses' }"
           class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
@@ -110,7 +114,7 @@
           <span>
            
             Add New Customer</span
-          >
+           >
         </router-link>
       </li>
 
@@ -371,21 +375,21 @@
     <ul
       class="grid lg:row-start-4 lg:col-start-1 gap-1 lg:col-end-2 gap-6 w-full  grid-col-4 items-center justify-around pb-2"
     >
-      <li class="lg:col-start-1 lg:col-end-3">
+      <li class="lg:col-start-1 lg:col-end-3 max-w-lg ">
         <performanceChart />
       </li>
-      <li class="lg:col-start-3 lg:col-end-4">
+      <li class="lg:col-start-3 lg:col-end-4 max-w-lg">
         <salesChart />
       </li>
     </ul>
     <ul
       class="grid lg:row-start-5  lg:row-end-6 gap-6  lg:col-start-1 gap-1 lg:col-end-2 grid-col-4 items-center justify-around"
     >
-      <li class="lg:col-start-1 xl:col-end-2">
+      <li class="lg:col-start-1 xl:col-end-2 max-w-lg">
         <DailySalesByItem />
       </li>
 
-      <li class="lg:col-start-2 lg:col-end-4">
+      <li class="lg:col-start-2 lg:col-end-4 max-w-lg">
         <ExpensesLineChart />
       </li>
     </ul>
