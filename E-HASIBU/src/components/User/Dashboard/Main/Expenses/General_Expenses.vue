@@ -35,7 +35,7 @@
 </template>
 <script>
 export default{ 
-    name:'General_Expense',
+    name:'General_Expenses',
 data (){
     return{
     records:[

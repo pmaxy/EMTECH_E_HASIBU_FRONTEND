@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-white  rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+  <div class="w-full bg-white  rounded-lg shadow dark:bg-gray-800 p-6">
     <div class="flex justify-between mb-5">
       <div class="grid gap-4 grid-cols-2">
         <div>
@@ -101,7 +101,7 @@
         </div>
       </div>
     </div>
-    <div id="line-chart" class="h-60"></div>
+    <div id="line-chart" class="h-70"></div>
     <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between mt-2.5">
       <div class="pt-5">
         <a
