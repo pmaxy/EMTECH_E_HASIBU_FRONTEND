@@ -53,6 +53,11 @@ const router = createRouter({
     component: () => import('../components/User/Dashboard/Main/sales/Invoice.vue'),
    }
    ,
+   {
+    path: '/Invoice_form',
+    name: 'Invoice_form',
+    component: () => import('../components/User/Dashboard/Main/sales/forms/Invoice_form.vue')
+  },
     {path: '/Customer Information',
     name: 'Customer Information',
     component: () => import('../components/User/Dashboard/Main/sales/Customer Information.vue'),

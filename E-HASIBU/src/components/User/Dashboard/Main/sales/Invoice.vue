@@ -2,7 +2,7 @@
   <div>
    <div>
  <h2 class="text-center font-bold">ALL INVOICES</h2>
-    <router-link :to="{name :'Quotation_form'}" class="bg-red-800 hover :bg-red-500 text-white font-bold py-1 px-1 rounded">Add Invoice</router-link>
+    <router-link :to="{name :'Invoice_form'}" class="bg-red-800 hover :bg-red-500 text-white font-bold py-1 px-1 rounded">Add Invoice</router-link>
   
 </div>
   <section class=" dark:bg-gray-900 sm:p-5">
