@@ -31,12 +31,8 @@
       </li>
 
       <li class="list_Button flex md:col-start-2 md:col-end-3">
-<<<<<<< HEAD
-        <router-link :to="{ name: 'Quotation' }"
-=======
         <router-link
           :to="{ name: 'SalesDashboard' }"
->>>>>>> a22899176d03257de31c5b64cb39afcba5637c16
           class="p-2 bg-white rounded-lg flex gap-2 items-center row hover:scale-[1.05] bg-gradient-to-br from-white to-red-50"
         >
         <div   class=" items-center bg-gradient-to-br from-red-500 to-red-900 shadow-md shadow-gray-300 transition-transform px-1 rounded-full"
