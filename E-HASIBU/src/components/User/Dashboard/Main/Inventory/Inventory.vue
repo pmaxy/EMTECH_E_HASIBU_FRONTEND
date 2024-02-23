@@ -1,22 +1,10 @@
 <template>
     <div>
-      <router-link :to="{name :'Inventoryform'}" class="bg-red-800 text-center py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2 text-white rounded">Add item</router-link>
-    <h1 class="font-bold text-center text colour-red-800">INVENTORY</h1>
-    <div class="fixed top-0 left-0 w-full h-full z-50 flex justify-center items-center" v-show="showForm">
-      <InventoryForm @close="showForm = false" @submit="addItem" />
-    </div>
-  <div>
-    <input class="rounded ml-2 mr-80" type="text" v-model="searchQuery" placeholder="Search items..." /><br>
-    <div  class="filters mr-80 "><br>
-      <label class="rounded ml-2 ">Filter by quantity:</label><br>
-      <select class="rounded ml-2 mb-2 mt-2" v-model="quantityFilter">
-        <option value="">All</option>
-        <option value="<10">Less than 10</option>
-        <option value=">10">More than 10</option>
-      </select>
-    </div> <br>
-
-    <section class=" dark:bg-gray-900 sm:p-5">
+      <button class="bg-red-800 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" v-on:click="toggleModal()">
+        ADD ITEM
+      </button>
+    <div>
+      <section class=" dark:bg-gray-900 sm:p-5">
     <div class="mx-auto max-w-screen-xl">
         <!-- Start coding here -->
         <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
@@ -69,28 +57,17 @@
                             </svg>
                         </button>
                         <div id="filterDropdown" class="z-10 hidden w-48 p-3 bg-white rounded-lg shadow dark:bg-gray-700">
-                            <h6 class="mb-3 text-sm font-medium text-gray-900 dark:text-white">Choose brand</h6>
+                            <h6 class="mb-3 text-sm font-medium text-gray-900 dark:text-white">Choose item</h6>
                             <ul class="space-y-2 text-sm" aria-labelledby="filterDropdownButton">
                                 <li class="flex items-center">
-                                    <input id="apple" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                    <label for="apple" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Apple (56)</label>
+                                    <input id="Item 1" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    <label for="Item 1" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Item 1</label>
                                 </li>
                                 <li class="flex items-center">
-                                    <input id="fitbit" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                    <label for="fitbit" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Microsoft (16)</label>
+                                    <input id="Item 2" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    <label for="Item 2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Item 2</label>
                                 </li>
-                                <li class="flex items-center">
-                                    <input id="razor" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                    <label for="razor" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Razor (49)</label>
-                                </li>
-                                <li class="flex items-center">
-                                    <input id="nikon" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                    <label for="nikon" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Nikon (12)</label>
-                                </li>
-                                <li class="flex items-center">
-                                    <input id="benq" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                    <label for="benq" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">BenQ (74)</label>
-                                </li>
+                               
                             </ul>
                         </div>
                     </div>
@@ -105,50 +82,20 @@
                             <th scope="col" class="px-4 py-3">Quantity</th>
                             <th scope="col" class="px-4 py-3">Price</th>
                             <th scope="col" class="px-4 py-3">Description</th>
-                            <th scope="col" class="px-4 py-3">
-                                Actions
-                                                        </th>
+                            <th scope="col" class="px-4 p-3">Actions</th> 
                         </tr>
                     </thead>
                     <tbody>
-                      <tr class="border-b dark:border-gray-700" v-for="item in filteredItems" :key="item.id">
+                      <tr class="border-b dark:border-gray-700" v-for="(item , index) in dataSource" :key="index">
                         <td  class="px-4 py-3">{{ item.name }}</td>
                         <td  class="px-4 py-3">{{ item.quantity }}</td>
                         <td  class="px-4 py-3">{{ item.price }}</td>
                         <td  class="px-4 py-3">{{ item.description }}</td>
-                        <td class="px-4 py-3 flex items-center justify-end">
-                                <button id="apple-imac-27-dropdown-button" data-dropdown-toggle="apple-imac-27-dropdown" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100" type="button">
-                                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                    </svg>
-                                </button>
-                                <div id="apple-imac-27-dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="apple-imac-27-dropdown-button">
-                                        <li>
-                                            <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
-                                        </li>
-                                    </ul>
-                                    <div class="py-1">
-                                        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
-                                    </div>
-                                </div>
-                            </td>
-                      </tr>
-                        <tr class="border-b dark:border-gray-700">
-                           
-                            <td class="px-4 py-3">PC</td>
-                            <td class="px-4 py-3">Apple</td>
-
-
-                       
-                            
-                        </tr>
-                 
-            
-                      
+                        <td> 
+                            <button @click="handleViewClick(row)" class="px-4 py-2 rounded  text-red-800 hover:bg-red-300">view</button>
+                            <button @click="handleEditClick(row)" class="px-4 py-2 rounded  text-red-800 hover:bg-red-300">Edit</button>
+                           </td>
+                      </tr> 
                     </tbody>
                 </table>
             </div>
@@ -159,131 +106,98 @@
                     of
                     <span class="font-semibold text-gray-900 dark:text-white">1000</span>
                 </span>
-                <ul class="inline-flex items-stretch -space-x-px">
-                    <li>
-                        <a href="#" class="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                            <span class="sr-only">Previous</span>
-                            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-                    </li>
-                    <li>
-                        <a href="#" aria-current="page" class="flex items-center justify-center text-sm z-10 py-2 px-3 leading-tight text-primary-600 bg-primary-50 border border-primary-300 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">100</a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                            <span class="sr-only">Next</span>
-                            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+             </nav>
         </div>
     </div>
-    </section>
-
-
-    <table class="my-table w-full border border-gray-100 table-auto">
-      <thead>
-        <tr>
-          <th class="px-4 py-2 border border-red-800 bg-white">Item Name</th>
-          <th class="px-4 py-2 border border-red-800 bg-white">Quantity</th>
-          <th class="px-4 py-2 border border-red-800 bg-white">Price</th>
-          <th class="px-4 py-2 border border-red-800 bg-white">Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="item in filteredItems" :key="item.id">
-          <td class="px-4 py-2 border border-red-800 ">{{ item.name }}</td>
-          <td class="px-4 py-2 border border-red-800 ">{{ item.quantity }}</td>
-          <td class="px-4 py-2 border border-red-800 ">{{ item.price }}</td>
-          <td class="px-4 py-2 border border-red-800">{{ item.description }}</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="pagination">
-      <button @click="prevPage">Previous</button>
-      <span>{{ currentPage }} / {{ totalPages }}</span>
-      <button @click="nextPage">Next</button>
-    </div>
+    </section>  
+   </div> 
 <div>
-    <label for="file-upload">Upload file: </label>
-    <input type="file" id="file-upload" @change="uploadFile">
+       <input type="file" id="file-upload" @change="uploadFile">
 </div>
-  </div>
-  
-                               
-  
+      <div v-if="showModal" class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
+        <div class="relative w-auto my-6 mx-auto max-w-6xl">
+          <!--content-->
+          <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+            <!--header-->
+            <div class="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+              <h3 class="text-xl font-semibold">
+                Add item
+              </h3>
+              <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" v-on:click="toggleModal()">
+                <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+            
+                </span>
+              </button>
+            </div>
+            <!--body-->
+            <div class="relative p-6 flex-auto">
+                <form>
+    <div class=" text-black ">
+    <div>
+  <label for="itemName" >Item Name</label><br>
+  <input class="shadow appearance-none border w-full py-2 px-3 text-black-700 leading-tight focus:outline-none focus:shadow-outline rounded"  type="text"  v-model="ItemName"/>
 </div>
+  <div>
+  <label for="Quantity" >Quantity</label> <br> 
+  <input class="shadow appearance-none border w-full py-2 px-3 text-black-700 leading-tight focus:outline-none focus:shadow-outline rounded "  type="number" v-model="Quantity"/>
+</div>
+  <div>
+  <label for="Price" >Price</label><br>
+  <input class="shadow appearance-none border w-full py-2 px-3 text-black-700 leading-tight focus:outline-none focus:shadow-outline rounded"  type="number" v-model="Price"/>
+</div>
+<div>
+  <label for="Description" >Description</label><br>
+  <input class="shadow appearance-none border w-full py-2 px-3 text-black-700 leading-tight focus:outline-none focus:shadow-outline rounded" type="text" v-model="Description"/>
+</div>
+</div> 
+<!--Add more form fields if needed-->
+</form><br><br>
+</div>
+            <!--footer-->
+            <div class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+              <button class="text-red-500 bg-transparent border border-solid border-red-500 hover:bg-red-500 hover:text-white active:bg-red-600 font-bold uppercase text-sm px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" v-on:click="toggleModal()">
+                Close
+              </button>
+              <button class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" v-on:click="toggleModal()">
+                Save Changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-if="showModal" class="opacity-50 fixed inset-0 z-40 bg-black"></div>
+    </div>
   </template>
   
   <script>
   export default {
-    name:"Inventory",
-      data() {
-        return {
-           
-      items: [
-        { id: 1, name: "Item 1", quantity: 5, price: 10, description: "This is item 1" },
-        { id: 2, name: "Item 2", quantity: 20, price: 25, description: "This is item 2" },
+    name: "large-modal",
+    data() {
+      return {
+        showModal: false,
+        dataSource: [
+        { name: "Item 1", quantity: 5, price: 10, description: "This is item 1" },
+        { name: "Item 2", quantity: 20, price: 25, description: "This is item 2" },
         // ... more items
       ],
       searchQuery: "",
-      quantityFilter: "",
       currentPage: 1,
       itemsPerPage: 10,
-    };
-  },
-  computed: {
-    filteredItems() {
-      return this.items.filter((item) => {
-        const nameMatch = item.name.toLowerCase().includes(this.searchQuery.toLowerCase());
-        const quantityMatch =
-          this.quantityFilter === "" ||
-          (this.quantityFilter === "<10" && item.quantity < 10) ||
-          (this.quantityFilter === ">10" && item.quantity > 10);
-        return nameMatch && quantityMatch;
-      });
-    },
-    totalPages() {
-      return Math.ceil(this.filteredItems.length / this.itemsPerPage);
-    },
-  },
-  methods: {
-    prevPage() {
-      if (this.currentPage > 1) {
-        this.currentPage--;
+      Item:'',
+      Quantity:'0',
+      Price:'0',
+      Description:'',
+
       }
     },
-    nextPage() {
-      if (this.currentPage < this.totalPages) {
-        this.currentPage++;
-      }
-    },
-    uploadFile(event) {
+    methods: {
+      toggleModal: function(){
+        this.showModal = !this.showModal;
+      },
+      uploadFile(event) {
       // Handle file upload logic here
       console.log("Uploading file:", event.target.files[0]);
         }   
-  },
-};
- </script>
-  
-  <style>
-  
-  </style>
+    }
+  }
+  </script>
